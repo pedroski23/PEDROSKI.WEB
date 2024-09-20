@@ -1,0 +1,102 @@
+/* Estilo general del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+/* Estilo del tablero */
+#tablero {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+    margin: 0 auto;
+    width: max-content;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+/* Estilo de las celdas */
+.celda {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.celda:hover {
+    background-color: #e0e0e0;
+}
+
+/* Estilo del mensaje */
+#mensaje {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo del botón */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Estilo de la barra inferior */
+#barra-inferior {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    overflow: hidden;
+}
+
+#barra-inferior p {
+    margin: 0;
+    font-size: 1.2rem;
+    white-space: nowrap;
+    display: inline-block;
+    animation: moverBarra 10s linear infinite;
+}
+
+/* Animación para desplazar el texto */
+@keyframes moverBarra {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
